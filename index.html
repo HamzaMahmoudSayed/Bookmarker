@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+    <!-- link font awesome file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- link bootstrap file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- link file css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <title>Bookmark</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar bg-body-tertiary py-3 position-fixed w-100 z-2">
+        <div class="container">
+            <a class="navbar-brand position-relative" href="#">Bookmarker</a>
+            <form class="d-flex m-auto w-75" role="search">
+                <input class="form-control me-2 w-100 rounded-pill text-center" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn-search rounded-pill" type="submit">Search</button>
+
+            </form>
+        </div>
+    </nav>
+
+    <button class="btn dropdown-toggle rounded-end-1 rounded-start-0 z-1" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <i class="fa-solid fa-gears text-white fs-5"></i>
+    </button>
+    <ul class="dropdown-menu pe-1 pt-1">
+        <li class="mb-4"><button type="button" class="btn-close" aria-label="Close"></button>
+        </li>
+        <li class="pt-2"><a class="dropdown-item" href="#"><span>
+                    Notifications <span class="badge text-bg-secondary">4</span>
+                </span></a></li>
+        <li><a class="dropdown-item" href="#">
+                <span type="button" class="position-relative">
+                    Inbox
+                    <span class="badge bg-danger ms-1 ">+99</span>
+                </span>
+            </a></li>
+        <li><a class="dropdown-item" href="#">
+                <span type="button" class="position-relative">
+                    Profile
+                    <span class="position-absolute start-100 ms-1 rounded-circle bg-danger p-2 mt-1"></span>
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <section class="pt-5">
+        <div class="container d-flex justify-content-center align-items-center flex-column py-5">
+            <div class="bookmark-header">
+                <h1 class="py-2 position-relative">Bookmarker</h1>
+            </div>
+            <div class="bookmark-body w-100 p-3 py-4 mt-5">
+
+                <h2 class="text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i>
+                </h2>
+
+                <div class="websitename my-4">
+                    <label for="websiteName" class="fw-bolder mb-2"><i class="fa-solid fa-book-bookmark me-2"></i>
+                        Site Name</label>
+                    <input type="text" oninput="validateInputs(this)" id="websiteName" class="form-control"
+                        placeholder="Bookmark Name">
+                </div>
+
+
+                <div class="websiteurl">
+                    <label for="websiteUrl" class="fw-bolder mb-2"><i class="fa-solid fa-link me-1"></i> Site
+                        URL</label>
+                    <input type="url" id="websiteUrl" oninput="validateInputs(this)" class="form-control"
+                        placeholder="Website URL">
+
+                </div>
+
+
+                <button class="px-5 submitBtn" onclick="addBookmark()">Submit <i
+                        class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+
+            <table class="w-100 bg-white mt-4">
+                <thead>
+                    <tr class="py-5">
+                        <th class="text-center">Index</th>
+                        <th class="text-center">Website Name</th>
+                        <th class="text-center">Visit</th>
+                        <th class="text-center">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="demo">
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+    <footer class="py-4">
+        <ul class="d-flex justify-content-center pt-2">
+            <i class="fa-brands fa-facebook-f text-white fs-5"></i>
+            <i class="fa-brands fa-twitter text-white ms-3 fs-5"></i>
+            <i class="fa-brands fa-google text-white ms-3 fs-5"></i>
+            <i class="fa-brands fa-linkedin-in text-white ms-3 fs-5"></i>
+        </ul>
+        <p class="text-center text-white">Copy Right 2024 © By <span class="fw-bolder"></span> All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+:root {
+    --main-color: #d1512d;
+    --hover-main-color: #bb4120;
+}
+
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 236, 222);
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+nav a {
+    font-family: "Pacifico", cursive;
+}
+
+.bookmark-header h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-search {
+    color: white;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding-block: 6px;
+    padding-inline: 15px;
+    transition: all 0.3s;
+}
+
+.btn-search:hover {
+    background-color: var(--hover-main-color);
+    border: 1px solid var(--hover-main-color);
+
+}
+
+.bookmark-header h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1
+}
+
+.bookmark-header h1:hover::before {
+    height: 50%;
+}
+
+.bookmark-body {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+.bookmark-body h2 {
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+    font-family: "Righteous", sans-serif;
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055
+}
+
+
+.bookmark-body button {
+    color: white;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    padding-block: 6px;
+    margin-top: 20px;
+    transition: all 0.3s;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.bookmark-body button:hover {
+    background-color: var(--hover-main-color);
+    border: 1px solid var(--hover-main-color)
+}
+
+.bookmark-body button i {
+    transition: all 0.3s;
+}
+
+.bookmark-body button:hover i {
+    transform: translateX(5px);
+}
+
+table thead tr th {
+    padding: 10px;
+}
+
+table tbody tr td {
+    padding-block: 10px;
+}
+
+table tbody tr td .btn-visit {
+    background-color: #9eb23b;
+    border: 1px solid #9eb23b;
+    transition: all 0.15s;
+    border-radius: 6px;
+    padding-block: 6px;
+}
+
+table tbody tr td .btn-visit:hover {
+    background-color: #8a9e23;
+    border: 1px solid #8a9e23;
+}
+
+table tbody tr td .btn-delete {
+    background-color: #eb1d36;
+    border: 1px solid #eb1d36;
+    transition: all 0.15s;
+    border-radius: 6px;
+    padding-block: 6px;
+}
+
+table tbody tr td .btn-delete:hover {
+    background-color: #d30820;
+    border: 1px solid #d30820;
+}
+
+table tbody tr {
+    border-top: 1px solid rgb(222, 226, 230);
+}
+
+.dropdown-toggle {
+    background-color: var(--main-color) !important;
+    padding: 8px !important;
+    position: fixed;
+    top: 30%;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown-menu {
+    border: none;
+    margin-top: 5px !important;
+    background-color: #f6f6f6;
+    margin: 10px 0 0 20px !important;
+
+}
+
+.btn-close {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.dropdown-menu::before {
+
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    left: 0px;
+    top: -18px;
+}
+
+button::after {
+    border-top: .3em solid !important;
+    border-right: .3em solid transparent !important;
+    border-bottom: 0 !important;
+    border-left: .3em solid transparent !important;
+    color: white;
+}
+
+.btn.show,
+.btn:first-child:active {
+    border: 1px solid var(--main-color);
+}
+
+footer {
+    background-color: rgb(31, 32, 33);
+}
+
+footer p span {
+    color: var(--main-color);
+}
+
+footer p span::before {
+    position: relative;
+    content: "";
+    animation-name: automatic-write;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes automatic-write {
+    0% {
+        content: "|";
+    }
+
+    10% {
+        content: "H|";
+    }
+
+    20% {
+        content: "Ha|";
+    }
+
+    30% {
+        content: "Ham|";
+    }
+
+    40% {
+        content: "Hamz|";
+    }
+
+    50% {
+        content: "Hamza|";
+    }
+
+    60% {
+        content: "Hamz|";
+    }
+
+    70% {
+        content: "Ham|";
+    }
+
+    80% {
+        content: "Ha|";
+    }
+
+    90% {
+        content: "H|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+footer ul .fa-facebook-f {
+    transition: all 0.5s;
+}
+
+footer ul .fa-facebook-f:hover {
+    color: rgb(24, 119, 242) !important;
+}
+
+footer ul .fa-twitter {
+    transition: all 0.5s;
+}
+
+footer ul .fa-twitter:hover {
+    color: rgb(29, 161, 242) !important;
+}
+
+footer ul .fa-google {
+    transition: all 0.5s;
+}
+
+footer ul .fa-google:hover {
+    color: rgb(234, 67, 53) !important;
+}
+
+
+footer ul .fa-linkedin-in {
+    transition: all 0.5s;
+}
+
+footer ul .fa-linkedin-in:hover {
+    color: #0077b5 !important;
+}
